@@ -21,11 +21,11 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-steps:
-  - shell: bash
-    env:
-      SECRET_REPO: ${{ secrets.SecretRepo }}
-      SECRET_ENVIRONMENT: ${{ secrets.SecretEnv }}
-    run: |
-      echo "$SUPER_SECRET"
-      echo "$SECRET_ENVIRONMENT"
+    steps:
+    - shell: bash
+      env:
+        SECRET_REPO: ${{ secrets.SecretRepo }}
+        SECRET_ENVIRONMENT: ${{ secrets.SecretEnv }}
+      run: |
+        echo "$SUPER_SECRET"
+        echo "$SECRET_ENVIRONMENT"
